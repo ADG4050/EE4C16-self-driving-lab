@@ -26,20 +26,11 @@ can run the car simulation in autonomous mode.
 [here](https://github.com/frcs/EE4C16-self-driving-lab/archive/master.zip)). Rename
 this folder `self-driving-lab`.
 
-2. If you are on the CadLab machines, start the anaconda prompt. We recommend to use `Miniconda3 (64 bit)`,
+2. If you are on the CadLab machines, start the anaconda prompt, `Anaconda Prompt (Miniconda3)`
 
-   1. Do not just search for 'Anaconda Prompt'!
-   You must find specifically the 'Anaconda 3' (64 bit) version in 'All Programs'.
+   > Note: Make sure you select **Anaconda Prompt (Miniconda3)**, you must find specifically this version, inside `All Programs` -> `Anaconda 3 (64 bit)`.
   
-   1. If Miniconda3 (64bit) is not found under `Ananconda Prompt` section, use the `Anaconda 3' (64 bit)` version. 
-
-      ![anaconda](/images/anaconda-start.jpg)
-
-   1. You can also install Miniconda3 in the CAD Lab machines via [official website](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links), choose `Miniconda3 Windows 64-bit`
-   ![image](https://user-images.githubusercontent.com/10833993/202025335-4491d2d1-aaae-4d5d-944e-5c9d87416b9f.png)
-
-
-3. then in your conda prompt, go to the extracted `self-driving-lab`
+3. In your conda prompt, go to the extracted `self-driving-lab`
 directory and then type:
 
 ```bash
@@ -68,8 +59,11 @@ On OSX, you'll need to follow instructions for how to [open an app from an unide
 
 ### Local Machine setup 
 If you want to install this on your machine, you will need
-[miniconda](https://conda.io/miniconda.html) or [anaconda](https://www.continuum.io/downloads) to use the
+[miniconda](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links) or [anaconda](https://www.continuum.io/downloads) to use the
 environment setting, or simply install the depencies with `pip`.
+
+![image](https://user-images.githubusercontent.com/10833993/202025335-4491d2d1-aaae-4d5d-944e-5c9d87416b9f.png)
+
 > *NOTE*: If you using Apple M* (M1/M2) PC, you will have to install `tensorflow-macos` and `tensorflow-metal` instead of `tensorflow`.
 
 
@@ -95,7 +89,7 @@ your Google Drive.
 ![image](https://user-images.githubusercontent.com/10833993/202027855-5f5adbee-30a8-47aa-b264-d146e41eca15.png)
 
 
-6. In the Jupyter notebook, the cell containing the following line will unzip the file to the Colab runtime:
+6. On the Google Colab/cluster, the containing follow line will unzip the file to the runtime:
 ```python
 !unzip -o -qq /content/gdrive/MyDrive/4c16-labs/data/recordings.zip -d /content/recordings
 ```
