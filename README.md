@@ -26,10 +26,12 @@ can run the car simulation in autonomous mode.
 [here](https://github.com/frcs/EE4C16-self-driving-lab/archive/master.zip)). Rename
 this folder `self-driving-lab`.
 
-2. If you are on the CadLab machines, start the anaconda prompt, `Anaconda Prompt (Miniconda3)`
+2. If you are on the CADLab machines, start the anaconda prompt, `Anaconda Prompt (Miniconda3)`
 
-   > Note: Make sure you select **Anaconda Prompt (Miniconda3)**, you must find specifically this version, inside `All Programs` -> `Anaconda 3 (64 bit)`.
-  
+![image](https://user-images.githubusercontent.com/10833993/202033254-24d955e8-1a81-4e6c-b353-de69ff3e120f.png)
+
+> Note: Make sure you select **Anaconda Prompt (Miniconda3)**, you must find specifically this version, inside `All Programs` -> `Anaconda 3 (64 bit)`.
+
 3. In your conda prompt, go to the extracted `self-driving-lab`
 directory and then type:
 
@@ -89,7 +91,7 @@ your Google Drive.
 ![image](https://user-images.githubusercontent.com/10833993/202027855-5f5adbee-30a8-47aa-b264-d146e41eca15.png)
 
 
-6. On the Google Colab/cluster, the containing follow line will unzip the file to the runtime:
+6. In the Jupyter notebook, the cell containing the following line will unzip the file to the Colab:
 ```python
 !unzip -o -qq /content/gdrive/MyDrive/4c16-labs/data/recordings.zip -d /content/recordings
 ```
