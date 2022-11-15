@@ -95,7 +95,7 @@ your Google Drive.
 ![image](https://user-images.githubusercontent.com/10833993/202027855-5f5adbee-30a8-47aa-b264-d146e41eca15.png)
 
 
-6. On the Google Colab/cluster, the cell containing the following line will unzip the file to the runtime:
+6. In the Jupyter notebook, the cell containing the following line will unzip the file to the Colab runtime:
 ```python
 !unzip -o -qq /content/gdrive/MyDrive/4c16-labs/data/recordings.zip -d /content/recordings
 ```
