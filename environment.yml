@@ -2,6 +2,8 @@ name: 4c16
 channels:
     - conda-forge
 dependencies:
+    - python-engineio=3.13.2
+    - python-socketio=4.6.1
     - flask-socketio
     - eventlet
     - pip:
