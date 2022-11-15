@@ -3,23 +3,21 @@
 ## Overview
 
 This lab is based on Udacity's [self driving car
-simulator](https://github.com/udacity/self-driving-car-sim), which is
-a nice testbed for training autonomous car using Convolutional Neural
-Networks.
+simulator](https://github.com/udacity/self-driving-car-sim), which is a nice
+testbed for training autonomous car using Convolutional Neural Networks.
 
 ![Simulated Self Driving Car Project Demo](/images/screenshot.jpg)
 
-The simulator, written in Unity, allows you to drive a car around a
-track and record a video of the front view of the ride as well as the
-input commands.
+The simulator, written in Unity, allows you to drive a car around a track and
+record a video of the front view of the ride as well as the input commands.
 
-You will upload this training data (the images + the input commands)
-to the GCP clusters and train a CNN to predict the steering angle
-command from the front view image alone. Thus, the input of your CNN
-is an image and the output is the steering angle.
+You will upload this training data (the images + the input commands) to the
+clusters and train a CNN to predict the steering angle command from the front
+view image alone. Thus, the input of your CNN is an image and the output is the
+steering angle.
 
-You will then download back the trained model onto your lab machine so
-that you can run the car simulation in autonomous mode.
+You will then download back the trained model onto your lab machine so that you
+can run the car simulation in autonomous mode.
 
 ## Preparing your lab machine
 
@@ -27,7 +25,7 @@ that you can run the car simulation in autonomous mode.
 [here](https://github.com/frcs/EE4C16-self-driving-lab/archive/master.zip)). Rename
 this folder `self-driving-lab`.
 
-2. If you are on the Lab machines, start the anaconda prompt.
+2. If you are on the CadLab machines, start the anaconda prompt.
 
 -- Do not just search for 'Anaconda Prompt'!
    You must find specifically the 'Anaconda 3' (64 bit) version in 'All Programs'.
@@ -52,7 +50,7 @@ simulator (see step 4).
 If you want to install this on your machine, you will need
 [anaconda](https://www.continuum.io/downloads) or
 [miniconda](https://conda.io/miniconda.html) to use the
-environment setting.
+environment setting, or simply install the depencies with `pip`.
 
 4. Download our modified Udacity's self driving car simulator.
 
@@ -62,6 +60,9 @@ can download a version for your system here:
 *  [win64](https://drive.google.com/file/d/1vs_AbhXxPVL1fjCbRiKItR0U432ANRyh)
 *  [linux64](https://drive.google.com/file/d/1ABdmMtDHMl_bRSTyDyH2zqdURkzzl93y)
 *  [OSX](https://drive.google.com/open?id=1qqt_Q8pZqQFpvn9xHRMc002ABq-tQQDK)
+
+On OSX, you'll need to follow instructions for how to [open an app from an unidentified developer
+](https://support.apple.com/en-ie/guide/mac-help/mh40616/mac).
 
 
 ### Collecting the training data
@@ -84,11 +85,9 @@ rather than by right-clicking and compressing the folder from the
 parent).  Then upload `recordings.zip` inside the `lab-06` directory of
 your cluster using the Jupyter notebook.
 
-6. On the cluster, these commands in the notebook will unzip the file:
+6. On the cluster, this cell in the notebook will unzip the file:
 ```python
-!rm -rf IMG
-!unzip -o -qq recordings.zip
-driving_log = './driving_log.csv'
+!unzip -o -qq /content/gdrive/MyDrive/4c16-labs/data/recordings.zip -d /content/recordings
 ```
 
 ### Training your CNN
