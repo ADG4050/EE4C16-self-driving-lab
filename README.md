@@ -64,8 +64,6 @@ If you want to install this on your machine, you will need
 [miniconda](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links) or [anaconda](https://www.continuum.io/downloads) to use the
 environment setting, or simply install the depencies with `pip`.
 
-![image](https://user-images.githubusercontent.com/10833993/202025335-4491d2d1-aaae-4d5d-944e-5c9d87416b9f.png)
-
 > *NOTE*: If you using Apple M* (M1/M2) PC, you will have to install `tensorflow-macos` and `tensorflow-metal` instead of `tensorflow`.
 
 
