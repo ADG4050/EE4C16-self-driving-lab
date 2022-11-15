@@ -1,5 +1,6 @@
 # EE4C16 - Self Driving Car Lab
 
+
 ## Overview
 
 This lab is based on Udacity's [self driving car
@@ -25,12 +26,18 @@ can run the car simulation in autonomous mode.
 [here](https://github.com/frcs/EE4C16-self-driving-lab/archive/master.zip)). Rename
 this folder `self-driving-lab`.
 
-2. If you are on the CadLab machines, start the anaconda prompt.
+2. If you are on the CadLab machines, start the anaconda prompt. We recommend to use `Miniconda3 (64 bit)`,
 
--- Do not just search for 'Anaconda Prompt'!
+   1. Do not just search for 'Anaconda Prompt'!
    You must find specifically the 'Anaconda 3' (64 bit) version in 'All Programs'.
+  
+   1. If Miniconda3 (64bit) is not found under `Ananconda Prompt` section, use the `Anaconda 3' (64 bit)` version. 
 
-![anaconda](/images/anaconda-start.jpg)
+      ![anaconda](/images/anaconda-start.jpg)
+
+   1. You can also install Miniconda3 in the CAD Lab machines via [official website](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links), choose `Miniconda3 Windows 64-bit`
+   ![image](https://user-images.githubusercontent.com/10833993/202025335-4491d2d1-aaae-4d5d-944e-5c9d87416b9f.png)
+
 
 3. then in your conda prompt, go to the extracted `self-driving-lab`
 directory and then type:
@@ -47,11 +54,6 @@ activate 4c16
 This will take a while, so in the meantime, let's play with the
 simulator (see step 4).
 
-If you want to install this on your machine, you will need
-[anaconda](https://www.continuum.io/downloads) or
-[miniconda](https://conda.io/miniconda.html) to use the
-environment setting, or simply install the depencies with `pip`.
-
 4. Download our modified Udacity's self driving car simulator.
 
 On the Lab machines, you will find a copy on `c:\4c16 Car\`. Otherwise you
@@ -61,11 +63,17 @@ can download a version for your system here:
 *  [linux64](https://drive.google.com/file/d/1ABdmMtDHMl_bRSTyDyH2zqdURkzzl93y)
 *  [OSX](https://drive.google.com/open?id=1qqt_Q8pZqQFpvn9xHRMc002ABq-tQQDK)
 
-On OSX, you'll need to follow instructions for how to [open an app from an unidentified developer
-](https://support.apple.com/en-ie/guide/mac-help/mh40616/mac).
+On OSX, you'll need to follow instructions for how to [open an app from an unidentified developer](https://support.apple.com/en-ie/guide/mac-help/mh40616/mac).
 
 
-### Collecting the training data
+### Local Machine setup 
+If you want to install this on your machine, you will need
+[miniconda](https://conda.io/miniconda.html) or [anaconda](https://www.continuum.io/downloads) to use the
+environment setting, or simply install the depencies with `pip`.
+> *NOTE*: If you using Apple M* (M1/M2) PC, you will have to install `tensorflow-macos` and `tensorflow-metal` instead of `tensorflow`.
+
+
+## Collecting the training data
 
 1. Start up the Udacity self-driving simulator, choose the **lake**
 scene (left) and press the Training Mode button.
@@ -82,19 +90,21 @@ for the processing of video to complete.
 that you will name `recordings.zip` (do this by selecting these two
 items inside the recordings folder and selecting 'create archive',
 rather than by right-clicking and compressing the folder from the
-parent).  Then upload `recordings.zip` inside the `lab-06` directory of
-your cluster using the Jupyter notebook.
+parent).  Then upload `recordings.zip` inside the `4c16-labs/data` directory of
+your Google Drive.
+![image](https://user-images.githubusercontent.com/10833993/202027855-5f5adbee-30a8-47aa-b264-d146e41eca15.png)
 
-6. On the cluster, this cell in the notebook will unzip the file:
+
+6. On the Google Colab/cluster, the containing follow line will unzip the file to the runtime:
 ```python
 !unzip -o -qq /content/gdrive/MyDrive/4c16-labs/data/recordings.zip -d /content/recordings
 ```
 
-### Training your CNN
+## Training your CNN
 
 check the Jupyter notebook for instructions.
 
-### Run in autonomous mode
+## Run in autonomous mode
 
 1. Once you have trained your model and saved the weights in
 `model.h5`. Download the weights back to your lab machine in the
@@ -117,7 +127,7 @@ saved. Type `ctrl-c`. It may take a while before `ctrl-c` has an
 effect.
 
 Check that the output file is in your directory and uplaod
-`car_positions.npz` to your cluster and add it to your git for
+`car_positions.npz` to your `lab-07` folder in the Google Drive and add it to your git for
 assessment.
 
 ## Links
