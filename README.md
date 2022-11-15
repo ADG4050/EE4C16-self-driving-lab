@@ -5,7 +5,7 @@
 
 This lab is based on Udacity's [self driving car
 simulator](https://github.com/udacity/self-driving-car-sim), which is a nice
-testbed for training autonomous car using Convolutional Neural Networks.
+testbed for training an autonomous car using Convolutional Neural Networks.
 
 ![Simulated Self Driving Car Project Demo](/images/screenshot.jpg)
 
@@ -19,6 +19,7 @@ steering angle.
 
 You will then download back the trained model onto your lab machine so that you
 can run the car simulation in autonomous mode.
+
 
 ## Preparing your lab machine
 
@@ -123,6 +124,10 @@ effect.
 Check that the output file is in your directory and uplaod
 `car_positions.npz` to your `lab-07` folder in the Google Drive and add it to your git for
 assessment.
+
+## Important remark
+
+One key take away from this lab should be that, more important than the network architecture is the design/collection of the training data. Think about what the network needs to learn! If your system performs poorly, this is probably because the training set is poor.
 
 ## Links
 
