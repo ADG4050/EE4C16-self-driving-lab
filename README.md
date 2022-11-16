@@ -42,7 +42,7 @@ conda env create -f environment.yml
 
 Then activate the environment. On windows you'll do:
 ```bash
-activate 4c16
+conda activate 4c16
 ```
 
 This will take a while, so in the meantime, let's play with the
